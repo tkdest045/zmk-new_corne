@@ -32,7 +32,7 @@
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
         };
 
         td1: td1 {
@@ -75,10 +75,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp GRAVE  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                            &trans          &kp N6  &kp N7           &kp N8           &kp N9           &kp N0    &kp DELETE
-&trans     &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3              &trans  &trans  &trans  &none   &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans     &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &none            &trans          &none   &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                            &trans        &trans        &trans                                            &trans  &trans           &trans
+&kp GRAVE         &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                            &trans          &kp N6  &kp N7           &kp N8           &kp N9           &kp N0    &kp DELETE
+&kp CAPSLOCK      &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3              &trans  &trans  &trans  &none   &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
+&kp LEFT_CONTROL  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &none            &trans          &none   &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
+                                                   &trans        &trans        &trans                                            &trans  &trans           &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -99,10 +99,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                            &trans                           &kp F6       &kp F7     &kp F8    &kp F9    &kp F10    &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &kp HOME  &kp UP    &kp END    &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &mmv MOVE_DOWN                   &trans       &trans     &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-                        &trans  &trans  &trans                                                             &trans       &trans     &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_USB                    &trans          &none        &none   &none     &none     &none      &kp K_LOCK
+&trans        &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &bootloader  &trans  &kp HOME  &kp UP    &kp END    &none
+&trans        &trans        &trans        &trans        &trans        &trans        &trans            &trans          &trans       &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+                                          &trans        &trans        &trans                                          &trans       &trans  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
