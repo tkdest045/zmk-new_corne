@@ -50,6 +50,15 @@
 
             label = "TB2";
         };
+
+        tb3: tb3 {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Shift/Caps Lock Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&none>, <&none>, <&to 5>;
+
+            label = "TB3";
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -102,14 +111,14 @@
 &kp ESCAPE  &kp Q  &kp W  &kp E     &kp R  &kp T                                    &mmv MOVE_UP                     &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &td1        &kp A  &kp S  &kp D     &kp F  &kp G                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
 &td0        &kp Z  &kp X  &kp C     &kp V  &kp B      &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &tb2
-                          &kp LGUI  &mo 2  &kp SPACE                                                                 &kp ENTER  &mo 1  &mo 3
+                          &kp LGUI  &tb3   &kp SPACE                                                                 &kp ENTER  &mo 1  &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        lower_layer {
-            display-name = "NUMBER";
+        Layer1 {
+            display-name = "Layer1";
             bindings = <
 &kp GRAVE       &kp N1     &kp N2     &kp N3        &kp N4            &kp N5                          &trans             &kp N6        &kp N7     &kp N8    &kp N9     &kp N0          &kp DELETE
 &kp LG(GRAVE)   &kp LG(A)  &kp LG(S)  &kp LG(D)     &kp LG(F)         &kp LG(G)               &trans  &mkp LCLK  &trans  &none         &kp PG_UP  &kp UP    &kp PG_DN  &none           &none
@@ -120,20 +129,20 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        raise_layer {
-            display-name = "SYMBOL";
+        Layer2 {
+            display-name = "Layer2";
             bindings = <
 &kp TILDE       &kp EXCL      &kp AT     &kp HASH              &kp DLLR   &kp PRCNT                                &trans             &kp CARET      &kp AMPS        &kp ASTRK       &kp LPAR          &kp RPAR           &kp DELETE
 &none           &none         &kp PG_UP  &kp UP                &kp PG_DN  &none                            &trans  &mkp RCLK  &trans  &none          &kp MINUS       &kp EQUAL       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
 &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT   &kp DOWN              &kp RIGHT  &none                  &trans            &trans             &kp LG(T)      &kp UNDERSCORE  &kp PLUS        &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PIPE
-                                         &kp LG(LEFT_BRACKET)  &trans     &kp LG(RIGHT_BRACKET)                                       &kp LG(SPACE)  &kp LEFT_GUI    &kp LEFT_SHIFT
+                                         &kp LG(LEFT_BRACKET)  &mo 2      &kp LG(RIGHT_BRACKET)                                       &kp LG(SPACE)  &kp LEFT_GUI    &kp LEFT_SHIFT
             >;
 
             sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_3 {
-            display-name = "Fn";
+        layer3 {
+            display-name = "Layer3";
             bindings = <
 &kp LG(NUMBER_1)   &kp LG(NUMBER_2)  &kp LS(LG(NUMBER_2))  &kp LG(LS(NUMBER_3))  &kt LS(LG(NUMBER_4))  &kt LS(LG(N5))                    &trans             &none  &none  &none         &none         &none          &emergent
 &kp LG(LS(GRAVE))  &kp LG(LS(A))     &kp LS(LG(S))         &kp LS(LG(D))         &kp LS(LG(F))         &kp LS(LG(G))             &trans  &mkp LCLK  &trans  &none  &none  &kp PG_UP     &kp LA(UP)    &kp PG_DN      &none
@@ -144,7 +153,7 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_4 {
+        layer4 {
             display-name = "System";
             bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_USB                    &trans             &bt BT_CLR_ALL  &none  &none   &none  &none  &tf
@@ -153,6 +162,18 @@
                                           &none         &none         &none                                              &none           &none  &trans
             >;
 
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        layer5 {
+            bindings = <
+&kp SLASH     &kp N7  &kp N8  &kp N9     &kp MINUS  &kp DELETE                      &none         &none  &to 0  &to 0  &none  &none  &none
+&kp ASTERISK  &kp N4  &kp N5  &kp N6     &kp PLUS   &kp BACKSPACE            &none  &none  &none  &to 0  &to 0  &to 0  &to 0  &none  &none
+&kp N0        &kp N1  &kp N2  &kp N3     &kp DOT    &kp TAB        &trans           &none         &none  &to 0  &to 0  &none  &none  &none
+                              &kp COMMA  &kp SPACE  &kp ENTER                                     &none  &none  &none
+            >;
+
+            label = "NUMBER";
             sensor-bindings = <&scroll_encoder>;
         };
     };
