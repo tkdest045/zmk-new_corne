@@ -66,30 +66,30 @@
         tap-ms = <100>;
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        change_lang {
-            bindings = <&kp LG(SPACE)>;
-            key-positions = <44 45>;
-            require-prior-idle-ms = <300>;
-            timeout-ms = <600>;
-            slow-release;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         emergent: emergent {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
+                <&kp C_STOP>,
+                <&macro_release>,
                 <&kp C_MUTE>,
                 <&macro_release>,
                 <&kp LC(LG(Q))>;
 
             label = "EMERGENT";
+        };
+
+        tf: tf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp N2 &kp N4 &kp L &kp E &kp M &kp O &kp N>,
+                <&macro_release>;
+
+            label = "TF";
         };
     };
 
@@ -111,10 +111,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp GRAVE       &kp N1     &kp N2     &kp N3        &kp N4            &kp N5                         &trans             &kp N6        &kp N7     &kp N8    &kp N9     &kp N0          &kp DELETE
-&kp LG(GRAVE)   &kp LG(A)  &kp LG(S)  &kp LG(D)     &kp LG(F)         &kp LS(G)              &trans  &mkp LCLK  &trans  &none         &kp PG_UP  &kp UP    &kp PG_DN  &none           &none
-&kp LEFT_SHIFT  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)         &kp LG(B)     &none            &trans             &kp LEFT_ALT  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LEFT_SHIFT  &none
-                                      &kp LEFT_GUI  &kp LEFT_CONTROL  &kp LEFT_ALT                                      &trans        &trans     &trans
+&kp GRAVE       &kp N1     &kp N2     &kp N3        &kp N4            &kp N5                          &trans             &kp N6        &kp N7     &kp N8    &kp N9     &kp N0          &kp DELETE
+&kp LG(GRAVE)   &kp LG(A)  &kp LG(S)  &kp LG(D)     &kp LG(F)         &kp LG(G)               &trans  &mkp LCLK  &trans  &none         &kp PG_UP  &kp UP    &kp PG_DN  &none           &none
+&kp LEFT_SHIFT  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)         &kp LG(B)     &trans            &trans             &kp LEFT_ALT  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LEFT_SHIFT  &none
+                                      &kp LEFT_GUI  &kp LEFT_CONTROL  &kp LEFT_ALT                                       &trans        &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -125,7 +125,7 @@
             bindings = <
 &kp TILDE       &kp EXCL      &kp AT     &kp HASH              &kp DLLR   &kp PRCNT                                &trans             &kp CARET      &kp AMPS        &kp ASTRK       &kp LPAR          &kp RPAR           &kp DELETE
 &none           &none         &kp PG_UP  &kp UP                &kp PG_DN  &none                            &trans  &mkp RCLK  &trans  &none          &kp MINUS       &kp EQUAL       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT   &kp DOWN              &kp RIGHT  &none                  &trans            &trans             &none          &kp UNDERSCORE  &kp PLUS        &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PIPE
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT   &kp DOWN              &kp RIGHT  &none                  &trans            &trans             &kp LG(T)      &kp UNDERSCORE  &kp PLUS        &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PIPE
                                          &kp LG(LEFT_BRACKET)  &trans     &kp LG(RIGHT_BRACKET)                                       &kp LG(SPACE)  &kp LEFT_GUI    &kp LEFT_SHIFT
             >;
 
@@ -135,10 +135,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LS(LG(NUMBER_2))  &kp LG(LS(NUMBER_3))  &kt LS(LG(NUMBER_4))  &kt LS(LG(N5))                    &trans             &none  &none  &none            &none        &none          &none
-&none             &none             &none                 &none                 &none                 &none                     &trans  &mkp LCLK  &trans  &none  &none  &kp PG_UP        &kp LA(UP)   &kp PG_DN      &none
-&none             &none             &none                 &none                 &none                 &none           &trans            &trans             &none  &none  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LA(RIGHT)  &kp LEFT_SHIFT
-                                                          &trans                &none                 &none                                                &none  &none  &trans
+&kp LG(NUMBER_1)   &kp LG(NUMBER_2)  &kp LS(LG(NUMBER_2))  &kp LG(LS(NUMBER_3))  &kt LS(LG(NUMBER_4))  &kt LS(LG(N5))                    &trans             &none  &none  &none         &none         &none          &emergent
+&kp LG(LS(GRAVE))  &kp LG(LS(A))     &kp LS(LG(S))         &kp LS(LG(D))         &kp LS(LG(F))         &kp LS(LG(G))             &trans  &mkp LCLK  &trans  &none  &none  &kp PG_UP     &kp LA(UP)    &kp PG_DN      &none
+&kp LEFT_SHIFT     &kp LG(LS(Z))     &kp LG(X)             &kp LS(LG(C))         &kp LS(LG(V))         &kp LS(LG(B))   &trans            &trans             &none  &none  &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(RIGHT)  &kp LEFT_SHIFT
+                                                           &kp LEFT_GUI          &kp LEFT_CONTROL      &kp LEFT_ALT                                         &none  &none  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -147,8 +147,8 @@
         layer_4 {
             display-name = "System";
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_USB                    &trans             &bt BT_CLR_ALL  &none  &none   &none  &none  &emergent
-&none         &none         &none         &none         &none         &none                   &trans  &mkp RCLK  &trans  &none           &none  &none   &none  &none  &none
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_USB                    &trans             &bt BT_CLR_ALL  &none  &none   &none  &none  &tf
+&none         &none         &none         &none         &none         &none                   &trans  &mkp LCLK  &trans  &none           &none  &none   &none  &none  &none
 &none         &none         &none         &none         &none         &none         &trans            &trans             &none           &none  &none   &none  &none  &mo 4
                                           &none         &none         &none                                              &none           &none  &trans
             >;
