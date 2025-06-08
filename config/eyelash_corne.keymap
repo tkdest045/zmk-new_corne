@@ -135,9 +135,9 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LS(LG(NUMBER_2))  &kp LG(LS(NUMBER_3))  &kt LS(LG(NUMBER_4))  &kt LS(LG(N5))                    &trans             &none  &none  &none         &none         &none          &none
-&none             &kp LG(A)         &none                 &none                 &none                 &none                     &trans  &mkp LCLK  &trans  &none  &none  &kp PG_UP     &kp LA(UP)    &kp PG_DN      &none
-&kp LS(LG(Z))     &kp LG(Z)         &kp LG(X)             &kp LG(C)             &kp LG(V)             &none           &trans            &trans             &none  &none  &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(RIGHT)  &kp LEFT_SHIFT
+&kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LS(LG(NUMBER_2))  &kp LG(LS(NUMBER_3))  &kt LS(LG(NUMBER_4))  &kt LS(LG(N5))                    &trans             &none  &none  &none            &none        &none          &none
+&none             &none             &none                 &none                 &none                 &none                     &trans  &mkp LCLK  &trans  &none  &none  &kp PG_UP        &kp LA(UP)   &kp PG_DN      &none
+&none             &none             &none                 &none                 &none                 &none           &trans            &trans             &none  &none  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LA(RIGHT)  &kp LEFT_SHIFT
                                                           &trans                &none                 &none                                                &none  &none  &trans
             >;
 
