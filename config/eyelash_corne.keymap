@@ -80,10 +80,10 @@
 
         change_lang {
             bindings = <&kp LG(SPACE)>;
-            key-positions = <45 43>;
+            key-positions = <45 42>;
             slow-release;
             require-prior-idle-ms = <600>;
-            layers = <1>;
+            layers = <0>;
             timeout-ms = <300>;
         };
     };
