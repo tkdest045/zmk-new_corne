@@ -44,10 +44,10 @@ layers:
   - {t: /, s: '?'}
   - '&tb2'
   - LGUI
-  - '&tb3'
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - '&tb3'
   - Layer1
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - Layer3
   Layer1:
   - {t: '`', s: '~'}
@@ -72,13 +72,13 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - PG UP
   - $$mdi:arrow-up-bold$$
   - PG DN
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-control$$
   - {t: Z, h: '$$mdi:apple-keyboard-command$$'}
   - {t: X, h: '$$mdi:apple-keyboard-command$$'}
   - {t: C, h: '$$mdi:apple-keyboard-command$$'}
@@ -86,17 +86,17 @@ layers:
   - Gui+B
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-option$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-command$$
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Layer2:
   - '~'
@@ -114,10 +114,10 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - PG UP
   - $$mdi:arrow-up-bold$$
   - PG DN
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -127,12 +127,12 @@ layers:
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - {t: \, s: '|'}
-  - $$mdi:apple-keyboard-shift$$
-  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Gui+T
@@ -141,12 +141,12 @@ layers:
   - '{'
   - '}'
   - '|'
-  - {t: 'Gui+[', s: 'Gui+{'}
+  - Gui+$$mdi:arrow-left-bold$$
+  - Gui+$$mdi:arrow-right-bold$$
   - Layer2
-  - {t: 'Gui+]', s: 'Gui+}'}
-  - Gui+$$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-option$$
   Layer3:
   - Gui+1
   - Gui+2
@@ -176,7 +176,7 @@ layers:
   - Alt+$$mdi:arrow-up-bold$$
   - PG DN
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
   - Gui+Sft+Z
   - {t: X, h: '$$mdi:apple-keyboard-command$$'}
   - Sft+Gui+C
@@ -189,9 +189,9 @@ layers:
   - Alt+$$mdi:arrow-left-bold$$
   - Alt+$$mdi:arrow-down-bold$$
   - Alt+$$mdi:arrow-right-bold$$
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-command$$
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -209,7 +209,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&tf'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -294,3 +294,6 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+combos:
+- p: [45, 43]
+  k: Gui+$$mdi:keyboard-space$$
