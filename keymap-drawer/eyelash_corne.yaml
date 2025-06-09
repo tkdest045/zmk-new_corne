@@ -44,7 +44,7 @@ layers:
   - {t: /, s: '?'}
   - '&tb2'
   - LGUI
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: System}
   - '&tb3'
   - Layer1
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -240,11 +240,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - System
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: System, type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:arrow-left-bold$$
+  - Gui+$$mdi:keyboard-space$$
+  - $$mdi:arrow-right-bold$$
   NUMBER:
   - {t: /, s: '?'}
   - {t: '7', s: '&'}
