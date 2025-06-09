@@ -295,6 +295,6 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
-- p: [45, 43]
+- p: [45, 42]
   k: Gui+$$mdi:keyboard-space$$
-  l: [Layer1]
+  l: [QWERTY]
