@@ -89,11 +89,11 @@
     };
 
     macros {
-        emergent: emergent {
+        VSC_MD: VSC_MD {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LG(Q))>;
-            label = "EMERGENT";
+            bindings = <&kp LG(K) &kp V>;
+            label = "VSC_MD";
         };
     };
 
@@ -115,10 +115,10 @@
         Layer1 {
             display-name = "Layer1";
             bindings = <
-&kp GRAVE         &kp N1     &kp N2     &kp N3        &kp N4          &kp N5                          &trans             &kp N6     &kp N7    &kp N8     &kp N9  &kp N0  &kp DELETE
-&kp LG(GRAVE)     &kp LG(A)  &kp LG(S)  &kp LG(D)     &kp LG(F)       &kp LG(G)               &trans  &mkp LCLK  &trans  &kp PG_UP  &kp UP    &kp PG_DN  &none   &none   &none
-&kp LEFT_CONTROL  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(B)     &trans            &trans             &kp LEFT   &kp DOWN  &kp RIGHT  &none   &none   &none
-                                        &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LEFT_ALT                                       &trans     &trans    &trans
+&kp GRAVE         &kp N1     &kp N2     &kp N3        &kp N4          &kp N5                          &trans             &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DELETE
+&kp LG(GRAVE)     &kp LG(A)  &kp LG(S)  &kp LG(D)     &kp LG(F)       &kp LG(G)               &trans  &mkp LCLK  &trans  &kp LG(H)  &kp LG(U)      &kp LG(I)     &kp LG(L)             &none                  &none
+&kp LEFT_CONTROL  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(B)     &trans            &trans             &kp LG(N)  &kp LG(M)      &none         &none                 &none                  &none
+                                        &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LEFT_ALT                                       &trans     &trans         &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -127,10 +127,10 @@
         Layer2 {
             display-name = "Layer2";
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT  &kp HASH      &kp DLLR       &kp PRCNT                    &trans             &kp CARET     &kp AMPS        &kp ASTRK     &kp LPAR          &kp RPAR           &kp DELETE
-&none      &none     &none   &kp PG_UP     &kp UP         &kp PG_DN            &trans  &mkp RCLK  &trans  &none         &kp MINUS       &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
-&none      &none     &none   &kp LEFT      &kp DOWN       &kp RIGHT  &trans            &trans             &kp LG(T)     &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PIPE
-                             &kp LG(LEFT)  &kp LG(RIGHT)  &mo 2                                           &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LEFT_ALT
+&kp TILDE  &kp EXCL      &kp AT        &kp HASH      &kp DLLR       &kp PRCNT                    &trans             &kp NUMBER_6  &kp N7          &kp N8        &kp N9            &kp N0             &kp DELETE
+&none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp N5               &trans  &mkp RCLK  &trans  &kp LG(P)     &kp MINUS       &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
+&none      &kp NUMBER_6  &kp N7        &kp N8        &kp N9         &kp N0     &trans            &trans             &kp LG(T)     &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PIPE
+                                       &kp LG(LEFT)  &kp LG(RIGHT)  &mo 2                                           &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LEFT_ALT
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -139,10 +139,10 @@
         layer3 {
             display-name = "Layer3";
             bindings = <
-&kp LG(NUMBER_1)   &kp LG(NUMBER_2)  &kp LS(LG(NUMBER_2))  &kp LG(LS(NUMBER_3))  &kt LS(LG(NUMBER_4))  &kt LS(LG(N5))                    &trans             &none  &none  &none         &none         &none          &emergent
-&kp LG(LS(GRAVE))  &kp LG(LS(A))     &kp LS(LG(S))         &kp LS(LG(D))         &kp LS(LG(F))         &kp LS(LG(G))             &trans  &mkp LCLK  &trans  &none  &none  &kp PG_UP     &kp LA(UP)    &kp PG_DN      &none
-&kp LEFT_CONTROL   &kp LG(LS(Z))     &kp LG(X)             &kp LS(LG(C))         &kp LS(LG(V))         &kp LS(LG(B))   &trans            &trans             &none  &none  &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(RIGHT)  &none
-                                                           &kp LEFT_GUI          &kp LEFT_SHIFT        &kp LEFT_ALT                                         &none  &none  &trans
+&kp LG(NUMBER_1)   &kp LG(NUMBER_2)  &kp LS(LG(NUMBER_2))  &kp LG(LS(NUMBER_3))  &kt LS(LG(NUMBER_4))  &kt LS(LG(N5))                    &trans             &none          &none  &none    &none               &none          &kp LC(LG(Q))
+&kp LG(LS(GRAVE))  &kp LG(LS(A))     &kp LS(LG(S))         &kp LS(LG(D))         &kp LS(LG(F))         &kp LS(LG(G))             &trans  &mkp LCLK  &trans  &none          &none  &VSC_MD  &kp LG(LS(L))       &kp LA(LG(F))  &none
+&kp LEFT_CONTROL   &kp LG(LS(Z))     &kp LG(X)             &kp LS(LG(C))         &kp LS(LG(V))         &kp LS(LG(B))   &trans            &trans             &kp LG(LS(N))  &none  &none    &kp LS(LG(PERIOD))  &none          &none
+                                                           &kp LEFT_GUI          &kp LEFT_SHIFT        &kp LEFT_ALT                                         &none          &none  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -151,9 +151,9 @@
         layer4 {
             display-name = "System";
             bindings = <
-&bt BT_SEL 0  &none  &kp PG_UP  &kp UP    &kp PG_DN  &none                    &trans             &none          &kp PG_UP       &kp UP        &kp PG_DN  &none  &out OUT_USB
-&bt BT_SEL 1  &none  &kp LEFT   &kp DOWN  &kp RIGHT  &none            &trans  &mkp LCLK  &trans  &none          &kp LEFT        &kp DOWN      &kp RIGHT  &none  &none
-&bt BT_SEL 2  &none  &none      &none     &none      &none  &trans            &trans             &none          &none           &none         &none      &none  &bt BT_CLR_ALL
+&bt BT_SEL 0  &none  &kp PG_UP  &kp UP    &kp PG_DN  &none                    &trans             &none          &kp PG_UP       &kp UP        &kp PG_DN  &none  &kp DELETE
+&bt BT_SEL 1  &none  &kp LEFT   &kp DOWN  &kp RIGHT  &none            &trans  &mkp LCLK  &trans  &none          &kp LEFT        &kp DOWN      &kp RIGHT  &none  &kp ENTER
+&out OUT_USB  &none  &none      &none     &none      &none  &trans            &trans             &none          &none           &none         &none      &none  &none
                                 &none     &mo 4      &none                                       &kp LG(SPACE)  &kp LEFT_SHIFT  &kp LEFT_ALT
             >;
 
@@ -162,10 +162,10 @@
 
         layer5 {
             bindings = <
-&kp SLASH     &kp N7  &kp N8  &kp N9     &kp MINUS  &kp DELETE                      &none         &none  &none  &none  &none  &none  &none
-&kp ASTERISK  &kp N4  &kp N5  &kp N6     &kp PLUS   &kp BACKSPACE            &none  &none  &none  &none  &none  &none  &none  &none  &none
-&kp N0        &kp N1  &kp N2  &kp N3     &kp DOT    &kp TAB        &trans           &none         &none  &none  &none  &none  &none  &tb3
-                              &kp COMMA  &kp SPACE  &kp ENTER                                     &none  &none  &none
+&kp SLASH        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS    &kp DELETE                      &none         &none  &none  &none  &none  &none  &none
+&kp ASTERISK     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS  &kp BACKSPACE            &none  &none  &none  &none  &none  &none  &none  &none  &none
+&kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT   &kp TAB        &trans           &none         &none  &none  &none  &none  &none  &tb3
+                                                   &kp KP_COMMA     &kp SPACE    &kp ENTER                                     &none  &none  &none
             >;
 
             label = "NUMBER";
