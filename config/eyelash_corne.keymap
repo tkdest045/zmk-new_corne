@@ -115,10 +115,10 @@
         Layer1 {
             display-name = "Layer1";
             bindings = <
-&kp GRAVE         &kp N1     &kp N2     &kp N3        &kp N4          &kp N5                          &trans             &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DELETE
-&kp LG(GRAVE)     &kp LG(A)  &kp LG(S)  &kp LG(D)     &kp LG(F)       &kp LG(G)               &trans  &mkp LCLK  &trans  &kp LG(H)  &kp LG(U)      &kp LG(I)     &kp LG(L)             &none                  &none
-&kp LEFT_CONTROL  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(B)     &trans            &trans             &kp LG(N)  &kp LG(M)      &none         &none                 &none                  &none
-                                        &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LEFT_ALT                                       &trans     &trans         &trans
+&kp GRAVE         &kp N1     &kp N2     &kp N3        &kp N4          &kp N5                          &trans             &kp NUMBER_6  &kp N7     &kp N8     &kp N9     &kp N0  &kp DELETE
+&kp LG(GRAVE)     &kp LG(A)  &kp LG(S)  &kp LG(D)     &kp LG(F)       &kp LG(G)               &trans  &mkp LCLK  &trans  &kp LG(H)     &kp LG(U)  &kp LG(I)  &kp LG(L)  &none   &none
+&kp LEFT_CONTROL  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(B)     &trans            &trans             &kp LG(N)     &kp LG(M)  &none      &none      &none   &none
+                                        &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LEFT_ALT                                       &trans        &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -127,9 +127,9 @@
         Layer2 {
             display-name = "Layer2";
             bindings = <
-&kp TILDE  &kp EXCL      &kp AT        &kp HASH      &kp DLLR       &kp PRCNT                    &trans             &kp NUMBER_6  &kp N7          &kp N8        &kp N9            &kp N0             &kp DELETE
-&none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp N5               &trans  &mkp RCLK  &trans  &kp LG(P)     &kp MINUS       &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
-&none      &kp NUMBER_6  &kp N7        &kp N8        &kp N9         &kp N0     &trans            &trans             &kp LG(T)     &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PIPE
+&kp TILDE  &kp EXCL      &kp AT        &kp HASH      &kp DLLR       &kp PRCNT                    &trans             &kp CARET     &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DELETE
+&none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp N5               &trans  &mkp RCLK  &trans  &kp LG(P)     &kp MINUS       &kp EQUAL     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH
+&none      &kp NUMBER_6  &kp N7        &kp N8        &kp N9         &kp N0     &trans            &trans             &kp LG(T)     &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
                                        &kp LG(LEFT)  &kp LG(RIGHT)  &mo 2                                           &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LEFT_ALT
             >;
 
