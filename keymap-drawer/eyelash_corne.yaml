@@ -78,7 +78,7 @@ layers:
   - Gui+L
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - {t: Z, h: '$$mdi:apple-keyboard-command$$'}
   - {t: X, h: '$$mdi:apple-keyboard-command$$'}
   - {t: C, h: '$$mdi:apple-keyboard-command$$'}
@@ -193,8 +193,8 @@ layers:
   - Gui+Sft+$$mdi:keyboard-tab$$
   - Gui+$$mdi:keyboard-tab$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: Gui+-, s: Gui+_}
+  - {t: Gui+=, s: Gui++}
   - {type: held}
   System:
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
