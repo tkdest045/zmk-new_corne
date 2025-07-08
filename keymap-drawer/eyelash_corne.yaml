@@ -44,7 +44,7 @@ layers:
   - {t: /, s: '?'}
   - '&change_language'
   - LGUI
-  - {t: '$$mdi:keyboard-space$$', h: System}
+  - {t: '$$mdi:keyboard-space$$', h: Layer2}
   - Layer1
   - Layer1
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -72,7 +72,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - Gui+P
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '-', s: _}
   - {t: '=', s: +}
   - {t: '[', s: '{'}
@@ -86,7 +86,7 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Gui+T
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - _
   - +
   - '{'
@@ -98,26 +98,26 @@ layers:
   - {t: Layer1, type: held alternate}
   - {t: Gui+-, s: Gui+_}
   - {t: Gui+=, s: Gui++}
-  System:
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - PG UP
+  Layer2:
+  - Sft+Gui+3
+  - $$mdi:backspace-reverse-outline$$
+  - HOME
   - $$mdi:arrow-up-bold$$
-  - PG DN
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PG UP
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - PG UP
+  - HOME
   - $$mdi:arrow-up-bold$$
-  - PG DN
+  - PG UP
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Sft+Gui+4
+  - $$mdi:apple-keyboard-shift$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -127,22 +127,22 @@ layers:
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: Sft+Gui+5, s: Sft+Gui+%}
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - END
+  - $$mdi:arrow-down-bold$$
+  - PG DN
+  - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - END
+  - $$mdi:arrow-down-bold$$
+  - PG DN
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: System, type: held}
+  - {t: Layer2, type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Gui+$$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-shift$$
