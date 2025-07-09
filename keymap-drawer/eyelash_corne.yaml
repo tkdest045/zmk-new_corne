@@ -111,7 +111,7 @@ layers:
   - $$mdi:arrow-up-bold$$
   - PG UP
   - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:backspace-reverse-outline$$
+  - $$mdi:volume-high$$
   - Sft+Gui+4
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:arrow-left-bold$$
@@ -125,8 +125,8 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:volume-low$$
   - {t: Sft+Gui+5, s: Sft+Gui+%}
   - $$mdi:apple-keyboard-shift$$
   - END
@@ -139,8 +139,8 @@ layers:
   - END
   - $$mdi:arrow-down-bold$$
   - PG DN
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-control$$
+  - MUTE
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: Layer2, type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
