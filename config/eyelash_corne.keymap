@@ -141,9 +141,9 @@
         Layer2 {
             display-name = "Layer2";
             bindings = <
-&kp LS(LG(NUMBER_3))  &kp DELETE      &kp HOME  &kp UP          &kp PG_UP  &kp BACKSPACE                       &trans             &kp DELETE      &kp HOME        &kp UP        &kp PG_UP  &kp BACKSPACE  &kp DELETE
-&kp LS(LG(NUMBER_4))  &kp LEFT_SHIFT  &kp LEFT  &kp DOWN        &kp RIGHT  &kp LEFT_ALT                &trans  &mkp LCLK  &trans  &kp LEFT_SHIFT  &kp LEFT        &kp DOWN      &kp RIGHT  &none          &kp ENTER
-&kp LS(LG(N5))        &kp LEFT_SHIFT  &kp END   &kp DOWN_ARROW  &kp PG_DN  &kp LEFT_CONTROL  &trans            &trans             &kp LEFT_SHIFT  &kp END         &kp DOWN      &kp PG_DN  &none          &none
+&kp LS(LG(NUMBER_3))  &kp DELETE      &kp HOME  &kp UP          &kp PG_UP  &kp BACKSPACE                       &trans             &kp DELETE      &kp HOME        &kp UP        &kp PG_UP  &kp BACKSPACE     &kp C_VOLUME_UP
+&kp LS(LG(NUMBER_4))  &kp LEFT_SHIFT  &kp LEFT  &kp DOWN        &kp RIGHT  &kp LEFT_ALT                &trans  &mkp LCLK  &trans  &kp LEFT_SHIFT  &kp LEFT        &kp DOWN      &kp RIGHT  &kp LEFT_ALT      &kp C_VOLUME_DOWN
+&kp LS(LG(N5))        &kp LEFT_SHIFT  &kp END   &kp DOWN_ARROW  &kp PG_DN  &kp LEFT_CONTROL  &trans            &trans             &kp LEFT_SHIFT  &kp END         &kp DOWN      &kp PG_DN  &kp LEFT_CONTROL  &kp K_MUTE
                                                 &none           &mo 2      &none                                                  &kp LG(SPACE)   &kp LEFT_SHIFT  &kp LEFT_ALT
             >;
 
