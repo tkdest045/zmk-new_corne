@@ -47,7 +47,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: Layer2}
   - Layer1
   - Layer1
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:keyboard-return$$', h: Layer2}
   - $$mdi:apple-keyboard-command$$
   Layer1:
   - '~'
@@ -145,7 +145,7 @@ layers:
   - {t: Layer2, type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Gui+$$mdi:keyboard-space$$
-  - $$mdi:apple-keyboard-shift$$
+  - {t: Layer2, type: held alternate}
   - $$mdi:apple-keyboard-option$$
   NUMBER:
   - {t: /, s: '?'}
