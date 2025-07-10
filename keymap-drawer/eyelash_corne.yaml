@@ -46,8 +46,8 @@ layers:
   - '&gui_shiftgui'
   - {t: '$$mdi:keyboard-space$$', h: Layer2R}
   - Layer1R
-  - Layer1R
-  - {t: '$$mdi:keyboard-return$$', h: Layer2R}
+  - Layer1L
+  - {t: '$$mdi:keyboard-return$$', h: Layer2L}
   - '&gui_shiftgui'
   Layer1R:
   - '~'
@@ -95,7 +95,7 @@ layers:
   - Sft+Ctl+$$mdi:keyboard-tab$$
   - Ctl+$$mdi:keyboard-tab$$
   - {t: Layer1R, type: held}
-  - {t: '$$mdi:keyboard-space$$', type: held alternate}
+  - $$mdi:keyboard-space$$
   - Gui+Sft+$$mdi:keyboard-tab$$
   - Gui+$$mdi:keyboard-tab$$
   Layer1L:
@@ -144,7 +144,7 @@ layers:
   - Sft+Ctl+$$mdi:keyboard-tab$$
   - Ctl+$$mdi:keyboard-tab$$
   - $$mdi:keyboard-space$$
-  - Layer1R
+  - {t: Layer1L, type: held}
   - Gui+Sft+$$mdi:keyboard-tab$$
   - Gui+$$mdi:keyboard-tab$$
   Layer2R:
@@ -194,7 +194,7 @@ layers:
   - {t: Layer2R, type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: 'Gui+$$mdi:keyboard-space$$', type: held alternate}
+  - Gui+$$mdi:keyboard-space$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   Layer2L:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -243,7 +243,7 @@ layers:
   - Gui+$$mdi:keyboard-space$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Layer2R
+  - {t: Layer2L, type: held}
   - '&btx3_out'
 combos:
 - p: [45, 42]
