@@ -42,14 +42,14 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - '&change_language'
-  - LGUI
-  - {t: '$$mdi:keyboard-space$$', h: Layer2}
-  - Layer1
-  - Layer1
-  - {t: '$$mdi:keyboard-return$$', h: Layer2}
-  - $$mdi:apple-keyboard-command$$
-  Layer1:
+  - $$mdi:apple-keyboard-shift$$
+  - '&gui_shiftgui'
+  - {t: '$$mdi:keyboard-space$$', h: Layer2R}
+  - Layer1R
+  - Layer1R
+  - {t: '$$mdi:keyboard-return$$', h: Layer2R}
+  - '&gui_shiftgui'
+  Layer1R:
   - '~'
   - '!'
   - '@'
@@ -63,7 +63,7 @@ layers:
   - (
   - )
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '`', s: '~'}
   - '1'
   - '2'
   - '3'
@@ -72,13 +72,13 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: Gui+=, s: Gui++}
   - {t: '-', s: _}
   - {t: '=', s: +}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - {t: \, s: '|'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&shiftguiToggle'
   - '6'
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
@@ -86,7 +86,7 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: Gui+-, s: Gui+_}
   - _
   - +
   - '{'
@@ -94,12 +94,61 @@ layers:
   - '|'
   - Sft+Ctl+$$mdi:keyboard-tab$$
   - Ctl+$$mdi:keyboard-tab$$
-  - {t: Layer1, type: held}
-  - {t: Layer1, type: held alternate}
-  - {t: Gui+-, s: Gui+_}
+  - {t: Layer1R, type: held}
+  - {t: '$$mdi:keyboard-space$$', type: held alternate}
+  - Gui+Sft+$$mdi:keyboard-tab$$
+  - Gui+$$mdi:keyboard-tab$$
+  Layer1L:
+  - '~'
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - $$mdi:backspace-reverse-outline$$
+  - {t: '`', s: '~'}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - {t: '5', s: '%'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:mouse-right-click-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: Gui+=, s: Gui++}
-  Layer2:
-  - Sft+Gui+3
+  - {t: '-', s: _}
+  - {t: '=', s: +}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - {t: \, s: '|'}
+  - '&shiftguiToggle'
+  - '6'
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Gui+-, s: Gui+_}
+  - _
+  - +
+  - '{'
+  - '}'
+  - '|'
+  - Sft+Ctl+$$mdi:keyboard-tab$$
+  - Ctl+$$mdi:keyboard-tab$$
+  - $$mdi:keyboard-space$$
+  - Layer1R
+  - Gui+Sft+$$mdi:keyboard-tab$$
+  - Gui+$$mdi:keyboard-tab$$
+  Layer2R:
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:backspace-reverse-outline$$
   - HOME
   - $$mdi:arrow-up-bold$$
@@ -111,8 +160,8 @@ layers:
   - $$mdi:arrow-up-bold$$
   - PG UP
   - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:volume-high$$
-  - Sft+Gui+4
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -126,8 +175,8 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - $$mdi:apple-keyboard-option$$
-  - $$mdi:volume-low$$
-  - {t: Sft+Gui+5, s: Sft+Gui+%}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-shift$$
   - END
   - $$mdi:arrow-down-bold$$
@@ -140,62 +189,62 @@ layers:
   - $$mdi:arrow-down-bold$$
   - PG DN
   - $$mdi:apple-keyboard-control$$
-  - MUTE
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: Layer2, type: held}
+  - '&btx3_out'
+  - {t: Layer2R, type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+$$mdi:keyboard-space$$
-  - {t: Layer2, type: held alternate}
-  - $$mdi:apple-keyboard-option$$
-  NUMBER:
-  - {t: /, s: '?'}
-  - KP 7
-  - KP 8
-  - KP 9
-  - {t: '-', s: _}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: 'Gui+$$mdi:keyboard-space$$', type: held alternate}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  Layer2L:
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '*'
-  - KP 4
-  - KP 5
-  - KP 6
-  - KP PLUS
+  - HOME
+  - $$mdi:arrow-up-bold$$
+  - PG UP
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:backspace-reverse-outline$$
+  - HOME
+  - $$mdi:arrow-up-bold$$
+  - PG UP
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - KP 0
-  - KP 1
-  - KP 2
-  - KP 3
-  - KP DOT
-  - $$mdi:keyboard-tab$$
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-shift$$
+  - END
+  - $$mdi:arrow-down-bold$$
+  - PG DN
+  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-shift$$
+  - END
+  - $$mdi:arrow-down-bold$$
+  - PG DN
+  - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+$$mdi:keyboard-space$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&return0'
-  - KP COMMA
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Layer2R
+  - '&btx3_out'
 combos:
 - p: [45, 42]
   k: Gui+$$mdi:keyboard-space$$
