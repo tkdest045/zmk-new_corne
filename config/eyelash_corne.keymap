@@ -64,11 +64,13 @@
                 <&none>;
         };
 
-        gui_shiftgui: gui_shiftgui {
+        gui_gui_shiftgui: gui_gui_shiftgui {
             compatible = "zmk,behavior-tap-dance";
-            label = "GUI_SHIFTGUI";
+            label = "GUI_GUI_SHIFTGUI";
             #binding-cells = <0>;
             bindings = <&kp LEFT_GUI>, <&kp LEFT_GUI>, <&kp LS(LEFT_GUI)>;
+
+            tapping-term-ms = <250>;
         };
 
         n_bt123_out: n_bt123_out {
@@ -81,6 +83,18 @@
                 <&bt BT_SEL 1>,
                 <&bt BT_SEL 2>,
                 <&out OUT_USB>;
+        };
+
+        nn_shiftcmd345: nn_shiftcmd345 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NN_SHIFTCMD345";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&none>,
+                <&kp LS(LG(NUMBER_3))>,
+                <&kp LS(LG(NUMBER_4))>,
+                <&kp LS(LG(N5))>;
         };
     };
 
@@ -126,10 +140,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESCAPE      &kp Q  &kp W  &kp E          &kp R        &kp T                                &mmv MOVE_UP                     &kp Y  &kp U        &kp I          &kp O    &kp P     &kp BSPC
-&tab_capslock   &kp A  &kp S  &kp D          &kp F        &kp G                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H  &kp J        &kp K          &kp L    &kp SEMI  &kp SQT
-&shift_control  &kp Z  &kp X  &kp C          &kp V        &kp B  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N  &kp M        &kp COMMA      &kp DOT  &kp FSLH  &kp LEFT_SHIFT
-                              &gui_shiftgui  &lt 3 SPACE  &mo 1                                                                 &mo 2  &lt 4 ENTER  &gui_shiftgui
+&kp ESCAPE      &kp Q  &kp W  &kp E              &kp R        &kp T                                &mmv MOVE_UP                     &kp Y  &kp U        &kp I              &kp O    &kp P     &kp BSPC
+&tab_capslock   &kp A  &kp S  &kp D              &kp F        &kp G                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H  &kp J        &kp K              &kp L    &kp SEMI  &kp SQT
+&shift_control  &kp Z  &kp X  &kp C              &kp V        &kp B  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N  &kp M        &kp COMMA          &kp DOT  &kp FSLH  &kp LEFT_SHIFT
+                              &gui_gui_shiftgui  &lt 3 SPACE  &mo 1                                                                 &mo 2  &lt 4 ENTER  &gui_gui_shiftgui
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -162,10 +176,10 @@
         Layer2R {
             display-name = "Layer2R";
             bindings = <
-&kp LS(LG(NUMBER_3))  &kp DELETE      &kp HOME  &kp UP          &kp PG_UP  &kp BACKSPACE                       &trans             &kp DELETE      &kp HOME  &kp UP    &kp PG_UP  &kp BACKSPACE     &none
-&kp LS(LG(NUMBER_4))  &kp LEFT_SHIFT  &kp LEFT  &kp DOWN        &kp RIGHT  &kp LEFT_ALT                &trans  &mkp LCLK  &trans  &kp LEFT_SHIFT  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_ALT      &none
-&kp LG(LS(N5))        &kp LEFT_SHIFT  &kp END   &kp DOWN_ARROW  &kp PG_DN  &kp LEFT_CONTROL  &trans            &trans             &kp LEFT_SHIFT  &kp END   &kp DOWN  &kp PG_DN  &kp LEFT_CONTROL  &none
-                                                &n_bt123_out    &mo 3      &none                                                  &none           &none     &kp F4
+&none  &kp DELETE      &kp HOME  &kp UP          &kp PG_UP  &kp BACKSPACE                       &trans             &kp DELETE      &kp HOME  &kp UP           &kp PG_UP  &kp BACKSPACE     &none
+&none  &kp LEFT_SHIFT  &kp LEFT  &kp DOWN        &kp RIGHT  &kp LEFT_ALT                &trans  &mkp LCLK  &trans  &kp LEFT_SHIFT  &kp LEFT  &kp DOWN         &kp RIGHT  &kp LEFT_ALT      &none
+&none  &kp LEFT_SHIFT  &kp END   &kp DOWN_ARROW  &kp PG_DN  &kp LEFT_CONTROL  &trans            &trans             &kp LEFT_SHIFT  &kp END   &kp DOWN         &kp PG_DN  &kp LEFT_CONTROL  &none
+                                 &n_bt123_out    &mo 3      &none                                                  &none           &none     &nn_shiftcmd345
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -174,10 +188,10 @@
         Layer2L {
             display-name = "Layer2L";
             bindings = <
-&kp LS(LG(NUMBER_3))  &kp DELETE      &kp HOME  &kp UP          &kp PG_UP  &kp BACKSPACE                       &trans             &kp DELETE      &kp HOME  &kp UP        &kp PG_UP  &kp BACKSPACE     &none
-&kp LS(LG(NUMBER_4))  &kp LEFT_SHIFT  &kp LEFT  &kp DOWN        &kp RIGHT  &kp LEFT_ALT                &trans  &mkp LCLK  &trans  &kp LEFT_SHIFT  &kp LEFT  &kp DOWN      &kp RIGHT  &kp LEFT_ALT      &none
-&kp LS(LG(N5))        &kp LEFT_SHIFT  &kp END   &kp DOWN_ARROW  &kp PG_DN  &kp LEFT_CONTROL  &trans            &trans             &kp LEFT_SHIFT  &kp END   &kp DOWN      &kp PG_DN  &kp LEFT_CONTROL  &none
-                                                &kp F4          &none      &none                                                  &none           &mo 4     &n_bt123_out
+&none  &kp DELETE      &kp HOME  &kp UP           &kp PG_UP  &kp BACKSPACE                       &trans             &kp DELETE      &kp HOME  &kp UP        &kp PG_UP  &kp BACKSPACE     &none
+&none  &kp LEFT_SHIFT  &kp LEFT  &kp DOWN         &kp RIGHT  &kp LEFT_ALT                &trans  &mkp LCLK  &trans  &kp LEFT_SHIFT  &kp LEFT  &kp DOWN      &kp RIGHT  &kp LEFT_ALT      &none
+&none  &kp LEFT_SHIFT  &kp END   &kp DOWN_ARROW   &kp PG_DN  &kp LEFT_CONTROL  &trans            &trans             &kp LEFT_SHIFT  &kp END   &kp DOWN      &kp PG_DN  &kp LEFT_CONTROL  &none
+                                 &nn_shiftcmd345  &none      &none                                                  &none           &mo 4     &n_bt123_out
             >;
 
             sensor-bindings = <&scroll_encoder>;
