@@ -95,7 +95,7 @@ layers:
   - Sft+Ctl+$$mdi:keyboard-tab$$
   - Ctl+$$mdi:keyboard-tab$$
   - {t: Layer1R, type: held}
-  - $$mdi:keyboard-space$$
+  - Gui+$$mdi:keyboard-space$$
   - Gui+Sft+$$mdi:keyboard-tab$$
   - Gui+$$mdi:keyboard-tab$$
   Layer1L:
@@ -190,12 +190,12 @@ layers:
   - PG DN
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&btx3_out'
+  - '&n_bt123_out'
   - {t: Layer2R, type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+$$mdi:keyboard-space$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - F4
+  - Sft+Gui+3
+  - Gui+Sft+4
+  - {t: Gui+Sft+5, s: Gui+Sft+%}
   Layer2L:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:backspace-reverse-outline$$
@@ -239,12 +239,12 @@ layers:
   - PG DN
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+$$mdi:keyboard-space$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+Sft+3
+  - Gui+Sft+4
+  - {t: Sft+Gui+5, s: Sft+Gui+%}
+  - F4
   - {t: Layer2L, type: held}
-  - '&btx3_out'
+  - '&n_bt123_out'
 combos:
 - p: [45, 42]
   k: Gui+$$mdi:keyboard-space$$
