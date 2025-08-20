@@ -140,34 +140,22 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESCAPE      &kp Q  &kp W  &kp E              &kp R        &kp T                                &mmv MOVE_UP                     &kp Y  &kp U        &kp I              &kp O    &kp P     &kp BSPC
-&tab_capslock   &kp A  &kp S  &kp D              &kp F        &kp G                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H  &kp J        &kp K              &kp L    &kp SEMI  &kp SQT
-&shift_control  &kp Z  &kp X  &kp C              &kp V        &kp B  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N  &kp M        &kp COMMA          &kp DOT  &kp FSLH  &kp LEFT_SHIFT
-                              &gui_gui_shiftgui  &lt 3 SPACE  &mo 1                                                                 &mo 2  &lt 4 ENTER  &gui_gui_shiftgui
+&kp ESCAPE  &kp Q  &kp W  &kp E     &kp R      &kp T                                &mmv MOVE_UP                     &kp Y  &kp U      &kp I             &kp O    &kp P     &kp BSPC
+&kp TAB     &kp A  &kp S  &kp D     &kp F      &kp G                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H  &kp J      &kp K             &kp L    &kp SEMI  &kp SQT
+&kp LSHIFT  &kp Z  &kp X  &kp C     &kp V      &kp B  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N  &kp M      &kp COMMA         &kp DOT  &kp FSLH  &kp LEFT_SHIFT
+                          &kp LGUI  &kp SPACE  &mo 2                                                                 &mo 1  &kp ENTER  &kp LEFT_CONTROL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        Layer1R {
-            display-name = "Layer1R";
+        Layer1 {
+            display-name = "Layer1";
             bindings = <
-&kp TILDE        &kp EXCL      &kp AT        &kp HASH         &kp DLLR      &kp PRCNT                    &trans             &kp CARET      &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DELETE
-&kp GRAVE        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp NUMBER_4  &kp N5               &trans  &mkp RCLK  &trans  &kp LG(EQUAL)  &kp MINUS        &kp EQUAL     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH
-&shiftguiToggle  &kp NUMBER_6  &kp N7        &kp N8           &kp N9        &kp N0     &trans            &trans             &kp LG(MINUS)  &kp UNDERSCORE   &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
-                                             &kp LS(LC(TAB))  &kp LC(TAB)   &mo 1                                           &kp LG(SPACE)  &kp LG(LS(TAB))  &kp LG(TAB)
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        layer1L {
-            display-name = "Layer1L";
-            bindings = <
-&kp TILDE        &kp EXCL      &kp AT        &kp HASH         &kp DLLR      &kp PRCNT                    &trans             &kp CARET      &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DELETE
-&kp GRAVE        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp NUMBER_4  &kp N5               &trans  &mkp RCLK  &trans  &kp LG(EQUAL)  &kp MINUS        &kp EQUAL     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH
-&shiftguiToggle  &kp NUMBER_6  &kp N7        &kp N8           &kp N9        &kp N0     &trans            &trans             &kp LG(MINUS)  &kp UNDERSCORE   &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
-                                             &kp LS(LC(TAB))  &kp LC(TAB)   &kp SPACE                                       &mo 2          &kp LG(LS(TAB))  &kp LG(TAB)
+&kp TILDE     &kp EXCL      &kp AT        &kp HASH         &kp DLLR      &kp PRCNT                        &trans             &kp CARET      &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DELETE
+&kp GRAVE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp NUMBER_4  &kp N5                   &trans  &mkp RCLK  &trans  &kp LG(EQUAL)  &kp MINUS        &kp EQUAL     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH
+&kp CAPSLOCK  &kp NUMBER_6  &kp N7        &kp N8           &kp N9        &kp N0         &trans            &trans             &kp LG(MINUS)  &kp UNDERSCORE   &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
+                                          &kp LS(LC(TAB))  &kp LC(TAB)   &kp LG(GRAVE)                                       &mo 1          &kp LG(LS(TAB))  &kp LG(TAB)
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -176,22 +164,10 @@
         Layer2R {
             display-name = "Layer2R";
             bindings = <
-&none  &kp DELETE      &kp HOME  &kp UP          &kp PG_UP  &kp BACKSPACE                       &trans             &kp DELETE      &kp HOME  &kp UP           &kp PG_UP  &kp BACKSPACE     &none
-&none  &kp LEFT_SHIFT  &kp LEFT  &kp DOWN        &kp RIGHT  &kp LEFT_ALT                &trans  &mkp LCLK  &trans  &kp LEFT_SHIFT  &kp LEFT  &kp DOWN         &kp RIGHT  &kp LEFT_ALT      &none
-&none  &kp LEFT_SHIFT  &kp END   &kp DOWN_ARROW  &kp PG_DN  &kp LEFT_CONTROL  &trans            &trans             &kp LEFT_SHIFT  &kp END   &kp DOWN         &kp PG_DN  &kp LEFT_CONTROL  &none
-                                 &n_bt123_out    &mo 3      &none                                                  &none           &none     &nn_shiftcmd345
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        Layer2L {
-            display-name = "Layer2L";
-            bindings = <
-&none  &kp DELETE      &kp HOME  &kp UP           &kp PG_UP  &kp BACKSPACE                       &trans             &kp DELETE      &kp HOME  &kp UP        &kp PG_UP  &kp BACKSPACE     &none
-&none  &kp LEFT_SHIFT  &kp LEFT  &kp DOWN         &kp RIGHT  &kp LEFT_ALT                &trans  &mkp LCLK  &trans  &kp LEFT_SHIFT  &kp LEFT  &kp DOWN      &kp RIGHT  &kp LEFT_ALT      &none
-&none  &kp LEFT_SHIFT  &kp END   &kp DOWN_ARROW   &kp PG_DN  &kp LEFT_CONTROL  &trans            &trans             &kp LEFT_SHIFT  &kp END   &kp DOWN      &kp PG_DN  &kp LEFT_CONTROL  &none
-                                 &nn_shiftcmd345  &none      &none                                                  &none           &mo 4     &n_bt123_out
+&kp LS(LG(NUMBER_3))  &kp DELETE      &kp HOME   &kp UP                &kp END                &kp BACKSPACE                       &trans             &none          &kp KP_N7  &kp KP_N8   &kp KP_N9  &none  &out OUT_USB
+&kp LS(LG(NUMBER_4))  &kp TAB         &kp LEFT   &kp DOWN              &kp RIGHT              &kp LEFT_ALT                &trans  &mkp RCLK  &trans  &none          &kp KP_N4  &kp KP_N5   &kp KP_N6  &none  &bt BT_SEL 0
+&kp LG(LS(N5))        &kp LEFT_SHIFT  &kp PG_UP  &kp DOWN_ARROW        &kp PG_DN              &kp LEFT_CONTROL  &trans            &trans             &none          &kp KP_N1  &kp KP_N2   &kp KP_N3  &none  &bt BT_SEL 1
+                                                 &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &mo 2                                                  &kp LG(SPACE)  &kp KP_N0  &kp PERIOD
             >;
 
             sensor-bindings = <&scroll_encoder>;
