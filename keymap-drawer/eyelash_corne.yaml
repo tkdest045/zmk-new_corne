@@ -45,8 +45,8 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - LGUI
   - $$mdi:keyboard-space$$
-  - Layer2R
-  - Layer1
+  - QWERTY
+  - QWERTY
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:apple-keyboard-control$$
   Layer1:
@@ -57,11 +57,11 @@ layers:
   - $
   - '%'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: /, s: '?'}
   - KP 7
   - KP 8
   - KP 9
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '-', s: _}
   - OUT USB
   - {t: '`', s: '~'}
   - '1'
@@ -72,11 +72,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '*'
   - KP 4
   - KP 5
   - KP 6
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - +
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - $$mdi:apple-keyboard-caps$$
   - '6'
@@ -86,19 +86,19 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - KP 1
   - KP 2
   - KP 3
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '=', s: +}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {t: 'Gui+[', s: 'Gui+{'}
   - {t: 'Gui+]', s: 'Gui+}'}
   - Layer1
-  - {t: 'Gui+$$mdi:keyboard-space$$', type: held}
+  - Gui+$$mdi:keyboard-space$$
   - KP 0
   - .
-  Layer2R:
+  Layer2:
   - Sft+Gui+3
   - $$mdi:backspace-reverse-outline$$
   - HOME
@@ -143,8 +143,8 @@ layers:
   - '|'
   - Ctl+Sft+$$mdi:keyboard-tab$$
   - Ctl+$$mdi:keyboard-tab$$
-  - {t: Gui+`, s: Gui+~, type: held}
-  - Layer2R
+  - {t: Gui+`, s: Gui+~}
+  - Layer2
   - Sft+Gui+$$mdi:keyboard-tab$$
   - Gui+$$mdi:keyboard-tab$$
 combos:
