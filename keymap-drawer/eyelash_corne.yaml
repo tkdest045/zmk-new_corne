@@ -45,8 +45,8 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - LGUI
   - $$mdi:keyboard-space$$
-  - QWERTY
-  - QWERTY
+  - Layer1
+  - Layer2
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:apple-keyboard-control$$
   Layer1:
@@ -94,7 +94,7 @@ layers:
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {t: 'Gui+[', s: 'Gui+{'}
   - {t: 'Gui+]', s: 'Gui+}'}
-  - Layer1
+  - {t: Layer1, type: held}
   - Gui+$$mdi:keyboard-space$$
   - KP 0
   - .
@@ -144,7 +144,7 @@ layers:
   - Ctl+Sft+$$mdi:keyboard-tab$$
   - Ctl+$$mdi:keyboard-tab$$
   - {t: Gui+`, s: Gui+~}
-  - Layer2
+  - {t: Layer2, type: held}
   - Sft+Gui+$$mdi:keyboard-tab$$
   - Gui+$$mdi:keyboard-tab$$
 combos:
