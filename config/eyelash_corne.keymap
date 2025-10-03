@@ -152,10 +152,10 @@
         layer_1 {
             display-name = "Layer1";
             bindings = <
-&kp TILDE     &kp EXCL      &kp AT        &kp HASH              &kp DLLR               &kp PRCNT                    &trans             &kp SLASH      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS  &out OUT_USB
-&kp GRAVE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4           &kp N5               &trans  &mkp RCLK  &trans  &kp ASTERISK   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS   &bt BT_SEL 0
-&kp CAPSLOCK  &kp NUMBER_6  &kp N7        &kp N8                &kp N9                 &kp N0     &trans            &trans             &kp BACKSPACE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL  &bt BT_SEL 1
-                                          &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &mo 1                                           &kp LG(SPACE)  &kp KP_N0        &kp PERIOD
+&kp TILDE     &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT                    &trans             &kp CARET      &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DELETE
+&kp GRAVE     &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                 &trans  &mkp RCLK  &trans  &none          &kp MINUS      &kp EQUAL     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp NON_US_BACKSLASH
+&kp CAPSLOCK  &kp NUMBER_6     &kp N7        &kp N8        &kp N9        &kp N0       &trans            &trans             &none          &kp UNDER      &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
+                                             &trans        &trans        &mo 1                                             &kp LG(SPACE)  &trans         &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
