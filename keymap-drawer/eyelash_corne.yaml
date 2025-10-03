@@ -57,12 +57,12 @@ layers:
   - $
   - '%'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: /, s: '?'}
-  - KP 7
-  - KP 8
-  - KP 9
-  - {t: '-', s: _}
-  - OUT USB
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - $$mdi:backspace-reverse-outline$$
   - {t: '`', s: '~'}
   - '1'
   - '2'
@@ -72,12 +72,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - '*'
-  - KP 4
-  - KP 5
-  - KP 6
-  - +
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '-', s: _}
+  - {t: '=', s: +}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - \
   - $$mdi:apple-keyboard-caps$$
   - '6'
   - {t: '7', s: '&'}
@@ -86,18 +86,18 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - KP 1
-  - KP 2
-  - KP 3
-  - {t: '=', s: +}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
-  - {t: 'Gui+[', s: 'Gui+{'}
-  - {t: 'Gui+]', s: 'Gui+}'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - _
+  - +
+  - '{'
+  - '}'
+  - '|'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: Layer1, type: held}
   - Gui+$$mdi:keyboard-space$$
-  - KP 0
-  - .
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   Layer2:
   - Sft+Gui+3
   - $$mdi:backspace-reverse-outline$$
