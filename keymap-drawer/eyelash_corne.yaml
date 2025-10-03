@@ -45,8 +45,8 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - LGUI
   - $$mdi:keyboard-space$$
-  - Layer1
   - Layer2
+  - Layer1
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:apple-keyboard-control$$
   Layer1:
@@ -94,59 +94,59 @@ layers:
   - '|'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: Layer1, type: held}
-  - Gui+$$mdi:keyboard-space$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Layer2:
-  - Sft+Gui+3
-  - $$mdi:backspace-reverse-outline$$
+  - OUT USB
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:backspace-reverse-outline$$
-  - Sft+Gui+4
-  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Gui+=, s: Gui++}
-  - {t: '-', s: _}
-  - {t: '=', s: +}
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - {t: \, s: '|'}
-  - {t: Gui+Sft+5, s: Gui+Sft+%}
+  - $$mdi:keyboard-tab$$
   - $$mdi:apple-keyboard-shift$$
-  - PG UP
-  - $$mdi:arrow-down-bold$$
-  - PG DN
+  - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-command$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Sft+Gui+3
+  - Sft+Gui+4
+  - {t: Sft+Gui+5, s: Sft+Gui+%}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Gui+-, s: Gui+_}
-  - _
-  - +
-  - '{'
-  - '}'
-  - '|'
-  - Ctl+Sft+$$mdi:keyboard-tab$$
-  - Ctl+$$mdi:keyboard-tab$$
-  - {t: Gui+`, s: Gui+~}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: Layer2, type: held}
-  - Sft+Gui+$$mdi:keyboard-tab$$
-  - Gui+$$mdi:keyboard-tab$$
+  - Gui+$$mdi:keyboard-space$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
 - p: [45, 42]
   k: Gui+$$mdi:keyboard-space$$
